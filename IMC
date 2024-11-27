@@ -1,0 +1,23 @@
+mport java.util.Scanner;
+public class IMCCalculator {
+public static void main(String[] args) {
+Scanner scanner = new Scanner(System.in);
+System.out.print(&quot;Digite o peso (em kg): &quot;);
+double peso = scanner.nextDouble();
+System.out.print(&quot;Digite a altura (em metros): &quot;);
+double altura = scanner.nextDouble();
+scanner.close();
+double imc = peso / (altura * altura);
+System.out.printf(&quot;Seu IMC é: %.2f%n&quot;, imc);
+// Classificar o IMC
+if (imc &lt; 18.5) {
+System.out.println(&quot;Classificação: Adulto com baixo peso.&quot;);
+} else if (imc &gt;= 18.5 &amp;&amp; imc &lt; 25.0) {
+System.out.println(&quot;Classificação: Adulto com peso adequado.&quot;);
+} else if (imc &gt;= 25.0 &amp;&amp; imc &lt; 30.0) {
+System.out.println(&quot;Classificação: Adulto com sobrepeso.&quot;);
+} else {
+System.out.println(&quot;Classificação: Adulto com obesidade.&quot;);
+}
+}
+}
